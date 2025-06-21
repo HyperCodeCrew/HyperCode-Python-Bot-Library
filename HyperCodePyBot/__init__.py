@@ -1,4 +1,5 @@
 # __init__.py
+import warnings
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -25,7 +26,7 @@ if version.parse(discord.__version__) < version.parse("2.0.0"):
 
 class HyperCodePyBot(commands.Bot):
     def __init__(self, command_prefix='!'):
-        if command_prefix == "/": warn("Command prefix cannot be '/' as it is reserved for slash commands. Use a different prefix or no prefix at all. it is buggy it not show autocompletion in chat and not recommended.")
+        if command_prefix == "/": warnings.warn("Command prefix cannot be '/' as it is reserved for slash commands. Use a different prefix or no prefix at all. it is buggy it not show autocompletion in chat and not recommended.")
         intents = discord.Intents.default()
         intents.message_content = True
         super().__init__(command_prefix=command_prefix, intents=intents)
