@@ -1,0 +1,9 @@
+[build-system]
+requires = ["discord.py>=2.0.0", "requests>=2.25.1", "packaging>=21.3", "aiohttp>=3.8.1", "asyncio>=3.4.3", "python-dotenv", "datetime>=5.5", "discord_webhook>=0.14.0"]
+
+[project]
+name = "HyperCodePyBot"
+version = "0.1.0"
+description = "A Discord bot framework with easy-to-use command and utility functions"
+authors = [{ name = "HyperCode Corw" }]
+readme = "README.md"
